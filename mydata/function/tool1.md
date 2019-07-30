@@ -211,3 +211,28 @@ openchangePrompt("3");
         $( this ).addClass("userinfo_main_csrq_i");   
     }   
 });
+
+页面跳转前执行AJAX
+window.onbeforeunload() 事件调用ajax的解决方法
+
+ function window.onbeforeunload() {
+
+     var jhid = $("#ctl00_ContentBody_hfGuid").val();
+     $.ajax({
+        url: "AjaxServices/AjaxService.asmx/DeleteDeviceAndWorkContent", // ajax 调用后台方法
+        type: "POST",
+        async: false,
+        data: "{'jhid':'" + jhid + "'}", // 参数
+        dataType: "json", // 返回类型
+        contentType: "application/json; charset=utf-8",
+        //成功时调用的方法
+        success: function(data) {
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            alert(XMLHttpRequest);
+            alert(textStatus);
+            alert(errorThrown);
+        }
+     });
+     
+ }

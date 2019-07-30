@@ -15,7 +15,8 @@ Git使用总结
  
 
 2.更新远程代码
-命令: git pull -u origin master:master。
+命令: 
+    git pull -u origin master:master。
 
 这里的master是我的分支的名称，在使用的时候要换成你自己分支的名称；也可直接 git pull 更新默认分支
 
