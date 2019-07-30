@@ -1,25 +1,25 @@
 笔记
 ===
 [toc]
-###保留几位小数
+### 保留几位小数
 
     var money=0.00542;
     alert(Number(money).toFixed(2));
     0.01
 
-###字符串截取
+### 字符串截取
 
     var money=0.00542;
     alert(Number(money).substring(0,3));
     0.0
 
-###字符串分割成数组
+### 字符串分割成数组
 
     var a="1/1/2/3/4/5/6/";
     a.split("/");
     [1,1,2,3,4,5,6]
 
-###数组转换字符串
+### 数组转换字符串
 
     var a=[1,1,2,3,4,5,6];
     a.join("/");
@@ -27,13 +27,13 @@
     a.join("");
     "1123456"
 
-###更多隐藏
+### 更多隐藏
 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 
-###网易CSS初始化
+### 网易CSS初始化
 
     html {overflow-y:scroll;}
     body {margin:0; padding:29px00; font:12px"\5B8B\4F53",sans-serif;background:#ffffff;}
@@ -45,7 +45,7 @@
     h1,h2,h3,h4,h5,h6{font-size:12px; font-weight:normal;}
     address,cite,code,em,th {font-weight:normal; font-style:normal;}
 
-###选择框设置默认值（jQuery）
+### 选择框设置默认值（jQuery）
 
     <select name="chose" id="chose">
     <option value="one"elected="selected">我是1</option>
@@ -54,7 +54,7 @@
     this.$html.find(".zjmz-addChatList-limit option[value='我是2']").attr("selected",true);
 
 
-###复制到剪切板
+### 复制到剪切板
 
     function copy() {
     安卓
@@ -67,7 +67,7 @@
     }
 
 
-###数组去重
+### 数组去重
 
     function uniq(array){
     var temp = []; //一个新的临时数组
@@ -80,7 +80,7 @@
     }
 
 
-###获取url中的参数
+### 获取url中的参数
 
     function getUrlParam(name) {
     var reg = new RegExp("(^|&)" +
@@ -91,7 +91,7 @@
     }
 
 -------------------------------日期格式化-----------------------------
-###年-月-日
+### 年-月-日
 
     function Format(fmt) { //author: meizz 
     var date = new Date(fmt);
@@ -105,7 +105,7 @@
     return y + '-' + m + '-' + d;
     }
 
-###年、月
+### 年、月
 
     function Format1(fmt) { //author: meizz 
     var date = new Date(fmt);
@@ -115,7 +115,7 @@
     return y + '年' + m + '月';
     }
 
-###年/月/日/时/分/秒
+### 年/月/日/时/分/秒
 
     function Format2(fmt) { //author: meizz
     var date = new Date(fmt);
@@ -135,7 +135,7 @@
     return y + '-' + m + '-' + d + " " + h + ":" + mi + ":" + s;
     }
 
-###年/月/日
+### 年/月/日
 
     function Format3(fmt) { //author: meizz
     var date = new Date(fmt);
@@ -158,7 +158,7 @@
     }
 
 
-###调用本地返回键>
+### 调用本地返回键>
 
     document.addEventListener("plusready", function () {
 
@@ -180,7 +180,7 @@
     }, false);
     });
 
-###监听断网
+### 监听断网
 
     var EventUtil = {
     addHandler: function (element, type, handler) {
@@ -204,7 +204,7 @@
     openchangePrompt("3");
     });
 
-###判断是否连网
+### 判断是否连网
 
     if(window.navigator.onLine==true) {
     console.log("已连网");
@@ -213,7 +213,7 @@
     }
 
 
-###点击眼睛查看密码
+### 点击眼睛查看密码
 
     <span class="openEye changeEye"></span>
     .openEye{
@@ -235,7 +235,7 @@
         }   
     });
 
-###页面跳转前执行AJAX
+### 页面跳转前执行AJAX
 
     window.onbeforeunload() 事件调用ajax的解决方法
 
