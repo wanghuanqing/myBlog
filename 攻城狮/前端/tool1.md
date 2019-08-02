@@ -53,6 +53,31 @@
     </select>
     this.$html.find(".zjmz-addChatList-limit option[value='我是2']").attr("selected",true);
 
+### js文本复制
+
+HTML 部分
+    <style type="text/css">
+    .wrapper {position: relative;}
+    #input {position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;}
+    </style>
+
+    <div class="wrapper">
+    <p id="text">我把你当兄弟你却想着复制我？</p>
+    <textarea id="input">这是幕后黑手</textarea>
+    <button onclick="copyText()">copy</button>
+    </div>
+
+JS 部分
+    <script type="text/javascript">
+    function copyText() {
+        var text = document.getElementById("text").innerText;
+        var input = document.getElementById("input");
+        input.value = text; // 修改文本框的内容
+        input.select(); // 选中文本
+        document.execCommand("copy"); // 执行浏览器复制命令
+        alert("复制成功");
+    }
+    </script>
 
 ### 复制到剪切板
 
