@@ -285,4 +285,27 @@ JS 部分
         });
         
     }
+### input 上传文件
 
+    <input accept="video/*" id="input-file" class="uploadVideo" type="file" value="" onchange="getPhoto(this)">
+    <!-- accept="video/*"视频；accept="autio/*"音频； accept="image/*"图片； -->
+    var files;
+    function getPhoto(object) {
+        try {
+            file = null;
+            if (object.files && object.files[0]) {
+                file = object.files[0];
+            } else if (object.files && object.files.item(0)) {
+                file = object.files.item(0);
+            }
+        } catch (e) {
+
+        }
+        var format = file.name.split('.')[1];
+        if (!/video\/\w+/.test(file.type)) { /*可以把autio改成其他文件类型 比如 image*/
+            openPrompt2('您的视频格式不正确，请上传正确的视频格式');
+            return false;
+        } else {
+        }
+
+    }
